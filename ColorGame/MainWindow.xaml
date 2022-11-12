@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="400"
+        Title="Color Game" Height="400" Width="400"
         WindowStyle="None"
         Background="#252525"
         AllowsTransparency="True"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Icon="Resources/SockIcon.ico">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
