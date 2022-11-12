@@ -1,0 +1,107 @@
+﻿<Window x:Class="ColorGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ColorGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="400"
+        WindowStyle="None"
+        Background="#252525"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/Button.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0"
+              Background="#1D1D1D"
+              MouseDown="Grid_MouseDown"  >
+            <StackPanel Orientation="Horizontal" 
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top">
+                <Button Content="–"
+                         Width="25"
+                        Style="{DynamicResource ButtonWindow}"
+                        FontSize="15"
+                        Foreground="Gray"
+                        Click="Button_Clicl_Minimize"
+                        />
+                <Button Content="☐"
+                         Width="25"
+                        Style="{DynamicResource ButtonWindow}"
+                        FontSize="15"
+                         Foreground="Gray"
+                        Click="Button_Click_Max"
+                         />
+                <Button Content="X"
+                        Width="25"
+                        Style="{DynamicResource ButtonWindow}"
+                        FontSize="15"
+                        Foreground="Gray"  
+                        Click="Button_Click_Stop"
+                        VerticalAlignment="Top"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <TextBlock Text="Yellow"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="20,0"
+                           FontSize="25"
+                           FontWeight="SemiBold"
+                           Name="TextBlockColor"/>
+                <TextBlock Text="Score:"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Right"
+                           Margin="20,0"
+                           FontSize="25"
+                           FontWeight="SemiBold"
+                           Foreground="#02B0C2"
+                           Name="TextBoxScore"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Width="150"
+                            Height="150"
+                            Style="{DynamicResource ButtonGame}"
+                            Background="#CB2440"
+                            Name="ButtonRed"
+                            Click="ButtonRed_Click"/>
+                    <Button Width="150"
+                            Height="150"
+                            Style="{DynamicResource ButtonGame}"
+                            Background="#1B5CD6"
+                            Name="ButtonBlue"
+                           Click="ButtonBlue_Click"/>
+                    <Button Width="150"
+                            Height="150"
+                            Style="{DynamicResource ButtonGame}"
+                            Background="#1BD66A"
+                            Name="ButtonGreen"
+                            Click="ButtonGreen_Click"/>
+                    <Button Width="150"
+                            Height="150"
+                            Style="{DynamicResource ButtonGame}"
+                            Background="#E5DD3F"
+                            Name="ButtonYellow"
+                            Click="ButtonYellow_Click"/>
+                </WrapPanel>
+            </Grid>
+        </Grid>
+
+        </Grid>
+</Window>
